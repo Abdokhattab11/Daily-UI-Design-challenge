@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+*:focus {
+  outline: none;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+.form__container {
+  border-radius: 5px;
+  padding: 2.5rem 2.5rem 5rem 2.5rem;
+  max-width: 700px;
+  margin: 15rem auto;
+  background-color: white;
+}
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 4rem;
+}
+.occuipy-col {
+  grid-column: 1/-1;
+}
+h3 {
+  position: relative;
+  font-size: 2.4rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+h3::after {
+  content: "";
+  position: absolute;
+  border-radius: 1px;
+  height: 3px;
+  width: 30px;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+  bottom: 0;
+  left: 0;
+}
+.input__cnt {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+.input__cnt label {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.input__cnt input {
+  width: 100%;
+  padding: 1.2rem;
+  border: none;
+  border: 1px solid #c2c2c2;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.input__cnt input::placeholder {
+  color: #828282;
+  font-size: 1.4rem;
+}
+
+.input__cnt-radio {
+  margin-bottom: 3rem;
+}
+.input__cnt-radio p {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+.input__cnt-radio input {
+  visibility: hidden;
+  opacity: 0;
+}
+.input__cnt-radio label {
+  cursor: pointer;
+  position: relative;
+  margin-right: 3rem;
+  font-size: 1.4rem;
+  margin-left: 2.7rem;
+}
+.input__cnt-radio label::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -30px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 3px solid #71b7e6;
+}
+.input__cnt-radio label::before {
+  content: "";
+  transition: all 0.3s;
+  position: absolute;
+  top: -3px;
+  left: -30px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 3px solid #71b7e6;
+  transform: scale(0.6);
+  opacity: 0;
+}
+.input__cnt-radio input:checked + label::before {
+  background-color: #71b7e6;
+  opacity: 1;
+}
+
+button {
+  transition: all 0.3s;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 3px;
+  font-size: 2rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+button:hover {
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+button:active {
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.2);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 700px) {
+  html {
+    font-size: 50%;
+  }
+  form {
+    grid-template-columns: 1fr;
+  }
+  .form__container {
+    max-width: 500px;
+  }
+}
