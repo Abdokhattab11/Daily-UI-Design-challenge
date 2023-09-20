@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <section class="section-order">
+      <div class="container">
+        <div class="order__summary">
+          <h4>Order Summary</h4>
+          <div class="order__item">
+            <img
+              src="img/product2.png"
+              alt="White shoe"
+              class="order__item-img" />
+            <div class="order__item-text">
+              <p class="order__item-comapny">Nike</p>
+              <p class="order__item-name">Free Run 3.0 Women</p>
+              <p class="order__item-property">Color: Grey/Orange, Size: 10.5</p>
+              <p class="order__item-price">&dollar;99.95</p>
+            </div>
+          </div>
+          <div class="order__item">
+            <img src="img/product2.png" alt="bag" class="order__item-img" />
+            <div class="order__item-text">
+              <p class="order__item-comapny">Fjällräven</p>
+              <p class="order__item-name">Vintage Backpack</p>
+              <p class="order__item-property">Color: Olive, Size: 20L</p>
+              <p class="order__item-price">&dollar;235.95</p>
+            </div>
+          </div>
+          <div class="order__item">
+            <img src="img/product3.png" alt="bag" class="order__item-img" />
+            <div class="order__item-text">
+              <p class="order__item-comapny">Monobento</p>
+              <p class="order__item-name">Double Lunchbox</p>
+              <p class="order__item-property">Color: Pink, Size: Medium</p>
+              <p class="order__item-price">&dollar;25.95</p>
+            </div>
+          </div>
+          <div class="order__total">
+            <div class="order__total-item">
+              <p>VAT 19%</p>
+              <p>$68.75</p>
+            </div>
+            <div class="order__total-item">
+              <p>Delivery</p>
+              <p>$4.95</p>
+            </div>
+            <div class="order__total-item total-price">
+              <p>total</p>
+              <p>$435.55</p>
+            </div>
+          </div>
+        </div>
+        <form class="order__checkout">
+          <div class="selection__checkout">
+            <label class="selection__label">Please select your card: </label>
+            <input
+              type="text"
+              class="payment__method"
+              placeholder="Payment Method"
+              readonly />
+            <ul class="payment__selection">
+              <li class="payment__selection-item">Visa</li>
+              <li class="payment__selection-item">Master Card</li>
+              <li class="payment__selection-item">American Express</li>
+            </ul>
+          </div>
+          <div class="payment__logo">
+            <img
+              src="img/visa.png"
+              alt="visa"
+              class="payment__logo-img visa-img" />
+            <img
+              src="img/mastercard.png"
+              alt="mastercard"
+              class="payment__logo-img mastercard-img" />
+            <img
+              src="img/american express.png"
+              alt="aExpress"
+              class="payment__logo-img express-img" />
+          </div>
+          <div class="input__cnt">
+            <label class="input__label" for="card-number">Card Number</label>
+            <input class="input__form" type="text" id="card-number" required />
+          </div>
+          <div class="input__cnt">
+            <label class="input__label" for="card-name">Card Name</label>
+            <input class="input__form" type="text" id="card-name" required />
+          </div>
+          <div class="input__cnt width-50 margin-left-med">
+            <label class="input__label" for="expire-data">Expire Data</label>
+            <input class="input__form" type="text" id="expire-data" required />
+          </div>
+          <div class="input__cnt width-50">
+            <label class="input__label" for="cvc">CVC</label>
+            <input class="input__form" type="text" id="cvc" required />
+          </div>
+          <button class="form__bnt">Checkout</button>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>
